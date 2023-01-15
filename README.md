@@ -1,6 +1,5 @@
 # Learning Location Quality Estimation and Regression Distribution for Visual Tracking
-
-# IEEE Transactions on Computational Social Systems
+IEEE Transactions on Computational Social Systems
 
 ## 1.result
 <table>
