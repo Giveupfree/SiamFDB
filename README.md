@@ -41,15 +41,15 @@ IEEE Transactions on Computational Social Systems
     <tr>
         <td rowspan="3" align=center>GOT10k</td>
         <td>AO</td>
-        <td>63.4</td>
+        <td>63.5</td>
     </tr>
     <tr>
         <td>SR0.5</td>
-        <td>73.5</td>
+        <td>73.8</td>
     </tr>
     <tr>
         <td>SR0.75</td>
-        <td>50.7</td>
+        <td>51.0</td>
     </tr>
         <tr>
         <td rowspan="3" align=center>VOT2019</td>
