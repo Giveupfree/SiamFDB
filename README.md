@@ -68,7 +68,7 @@ IEEE Transactions on Computational Social Systems
 
 ## 2.Cite
 If you use SiamFDB in your work please cite our paper:
-> @ARTICLE{10034430,
+> @ARTICLE{10034430,  
   author={Hu, Shuo and Zhou, Sien and Lu, Jinbo and Yu, Hui},  
   journal={IEEE Transactions on Computational Social Systems},  
   title={Flexible Dual-Branch Siamese Network: Learning Location Quality Estimation and Regression Distribution for Visual Tracking},  
