@@ -66,6 +66,10 @@ IEEE Transactions on Computational Social Systems
     </tr>
 </table>
 
+### Download pretrained backbones
+Download pretrained backbones from [google driver](https://drive.google.com/drive/folders/1DuXVWVYIeynAcvt9uxtkuleV6bs6e3T9) or [BaiduYun](https://pan.baidu.com/s/1IfZoxZNynPdY2UJ_--ZG2w) (code: 7n7d) and put them into `pretrained_models` directory.
+
+
 ## 2.Cite
 If you use SiamFDB in your work please cite our paper:
 > @ARTICLE{10034430,  
