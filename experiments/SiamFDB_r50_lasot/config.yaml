@@ -34,6 +34,7 @@ TRAIN:
     REG_TOPK: 4
     PRIOR_PROB: 0.01
     OUTPUT_SIZE: 25 # 31
+    REG_MAX: 16
     LOG_DIR: 'logLaSOT'
     SNAPSHOT_DIR: './snapshotLaSOT'
 
