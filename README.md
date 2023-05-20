@@ -76,4 +76,5 @@ If you use SiamFDB in your work please cite our paper:
   volume={},
   number={},
   pages={1-9},
-  doi={10.1109/TCSS.2023.3235649}}
+  doi={10.1109/TCSS.2023.3235649}
+}
