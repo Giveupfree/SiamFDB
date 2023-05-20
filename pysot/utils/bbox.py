@@ -47,10 +47,10 @@ def center2corner(center):
         return Corner(x - w * 0.5, y - h * 0.5, x + w * 0.5, y + h * 0.5)
     else:
         x, y, w, h = center[0], center[1], center[2], center[3]
-        x1 = x - w * 0.5
-        y1 = y - h * 0.5
-        x2 = x + w * 0.5
-        y2 = y + h * 0.5
+        x1 = x - (w-1) * 0.5
+        y1 = y - (h-1) * 0.5
+        x2 = x + (w-1) * 0.5
+        y2 = y + (h-1) * 0.5
         return x1, y1, x2, y2
 
 
@@ -129,8 +129,8 @@ def get_axis_aligned_bbox(region):
         y = region[1]
         w = region[2]
         h = region[3]
-        cx = x+w/2
-        cy = y+h/2
+        cx = x+(w-1)/2
+        cy = y+(h-1)/2
     return cx, cy, w, h
 
 
@@ -152,6 +152,6 @@ def get_min_max_bbox(region):
         y = region[1]
         w = region[2]
         h = region[3]
-        cx = x+w/2
-        cy = y+h/2
+        cx = x+(w-1)/2
+        cy = y+(h-1)/2
     return cx, cy, w, h
