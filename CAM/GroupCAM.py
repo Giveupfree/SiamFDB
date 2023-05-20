@@ -13,19 +13,31 @@ import cv2
 import torchvision.transforms as transforms
 
 
-class UnNormalize(object):
+class UnNormalize(nn.Module):
     def __init__(self, mean, std):
+        super(UnNormalize, self).__init__()
         self.mean = mean
         self.std = std
 
-    def __call__(self, tensor):
+    def forward(self, tensor):
         """
         Args:
         :param tensor: tensor image of size (B,C,H,W) to be un-normalized
         :return: UnNormalized image
         """
-        for t, m, s in zip(tensor, self.mean, self.std):
-            t.mul_(s).add_(m)
+        mean = torch.as_tensor(self.mean, dtype=tensor.dtype, device=tensor.device)
+        std = torch.as_tensor(self.std, dtype=tensor.dtype, device=tensor.device)
+        tensor = tensor
+        
+        mean = mean.view(3, 1, 1)
+        std = std.view(3, 1, 1)
+        
+        if tensor.ndim > 3:
+            mean = mean.unsqueeze(0)
+            std = std.unsqueeze(0)
+        mean = mean.expand(tensor.shape)
+        std = std.expand(tensor.shape)
+        tensor = tensor * std + mean
         tensor = tensor.clamp(min=0, max=1)
         return tensor
 
