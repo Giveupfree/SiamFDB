@@ -65,8 +65,8 @@ IEEE Transactions on Computational Social Systems
         <td>42.6</td>
     </tr>
 </table>
-
-@ARTICLE{10034430,
+## 2.Cite
+> @ARTICLE{10034430,
   author={Hu, Shuo and Zhou, Sien and Lu, Jinbo and Yu, Hui},
   journal={IEEE Transactions on Computational Social Systems}, 
   title={Flexible Dual-Branch Siamese Network: Learning Location Quality Estimation and Regression Distribution for Visual Tracking}, 
