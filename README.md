@@ -65,7 +65,9 @@ IEEE Transactions on Computational Social Systems
         <td>42.6</td>
     </tr>
 </table>
+
 ## 2.Cite
+If you use SiamFDB in your work please cite our paper:
 > @ARTICLE{10034430,
   author={Hu, Shuo and Zhou, Sien and Lu, Jinbo and Yu, Hui},
   journal={IEEE Transactions on Computational Social Systems}, 
