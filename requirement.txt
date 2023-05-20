@@ -1,0 +1,17 @@
+numpy
+opencv-python
+pyyaml
+yacs
+tqdm
+colorama
+matplotlib
+cython
+tensorboardX
+pandas
+optuna
+visdom
+wget
+shapely
+pytorch>=1.7.1
+kornia
+sklearn
