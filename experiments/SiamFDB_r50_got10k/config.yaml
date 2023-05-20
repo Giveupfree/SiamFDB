@@ -34,8 +34,8 @@ TRAIN:
     REG_TOPK: 4
     PRIOR_PROB: 0.01
     OUTPUT_SIZE: 25 # 31
-    LOG_DIR: 'logGOT1'
-    SNAPSHOT_DIR: './snapshotGOT1'
+    LOG_DIR: 'logGOT'
+    SNAPSHOT_DIR: './snapshotGOT'
 
     LR:
         TYPE: 'cos'
