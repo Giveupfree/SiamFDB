@@ -95,7 +95,13 @@ class FDBHead(torch.nn.Module):
             else:
                 stat = prob_topk
             qs = self.reg_conf(stat.reshape(N,-1,H,W))
-            logits = logits * qs
+            
+            if cfg.TRAIN.NUM_CLASSES == 2:
+                background = logits[:,0,:,:].reshape(N,-1,H,W)
+                foreground = logits[:,-1,:,:].reshape(N,-1,H,W) * qs
+                logits = torch.cat([background,foreground],dim=1)
+            else:
+                logits = logits * qs
 
         return logits, bbox_reg
 
