@@ -4,6 +4,14 @@ import math
 from pysot.core.config import cfg
 import torch.nn.functional as F
 
+class Scale(nn.Module):
+    def __init__(self, init_value=1.0):
+        super(Scale, self).__init__()
+        self.scale = nn.Parameter(torch.FloatTensor([init_value]))
+
+    def forward(self, input):
+        return input * self.scale
+
 class FDBHead(torch.nn.Module):
     def __init__(self, cfg, in_channels, add_mean=True):
         """
@@ -89,12 +97,5 @@ class FDBHead(torch.nn.Module):
         return logits, bbox_reg
 
 
-class Scale(nn.Module):
-    def __init__(self, init_value=1.0):
-        super(Scale, self).__init__()
-        self.scale = nn.Parameter(torch.FloatTensor([init_value]))
-
-    def forward(self, input):
-        return input * self.scale
 
 
