@@ -76,7 +76,7 @@ pip install -r requirements.txt
 ## Download the pretrained model:  
 [model](https://pan.baidu.com/s/1aVYFDC-11eD-RDK85BSMSQ) code: xyqt
 
-Download testing datasets and put them into `test_dataset` directory. Jsons of commonly used datasets can be downloaded from [BaiduYun](https://pan.baidu.com/s/1js0Qhykqqur7_lNRtle1tA#list/path=%2F) or [Google driver](https://drive.google.com/drive/folders/1TC8obz4TvlbvTRWbS4Cn4VwwJ8tXs2sv?usp=sharing). If you want to test the tracker on a new dataset, please refer to [pysot-toolkit](https://github.com/Giveupfree/SOTDrawRect) to set test_dataset.
+Download testing datasets and put them into `test_dataset` directory. If you want to test the tracker on a new dataset, please refer to [pysot-toolkit](https://github.com/Giveupfree/SOTDrawRect) to set test_dataset.
 
 
 ### Download pretrained backbones
