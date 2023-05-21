@@ -110,16 +110,16 @@ class Tracker:
 
 
 def run_vot2020(snapshot):
-    tracker = Tracker('./experiments/SiamPD_r50/config.yaml', 'VOT2020',snapshot)
+    tracker = Tracker('./experiments/SiamFDB_r50/config.yaml', 'VOT2020',snapshot)
     tracker.run_vot()
 
 
 def run_vot(dataset,snapshot):
-    tracker = Tracker('./experiments/SiamPD_r50/config.yaml', dataset, snapshot)
+    tracker = Tracker('./experiments/SiamFDB_r50/config.yaml', dataset, snapshot)
     tracker.run_vot()
 
 def run_vot2019():
-    tracker = Tracker('./experiments/SiamPD_r50/config.yaml', 'VOT2019', './snapshotAll/checkpoint_e14.pth')
+    tracker = Tracker('./experiments/SiamFDB_r50/config.yaml', 'VOT2019', './snapshotAll/checkpoint_e14.pth')
     tracker.run_vot()
 
 def main():

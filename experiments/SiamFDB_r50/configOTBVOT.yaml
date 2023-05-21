@@ -5,7 +5,7 @@ BACKBONE:
     KWARGS:
         used_layers: [3]
     PRETRAINED: 'pretrained_models/resnet50.model'
-    TRAIN_LAYERS: ['layer1', 'layer2','layer3']
+    TRAIN_LAYERS: ['layer1','layer2','layer3']
     TRAIN_EPOCH: 10
     LAYERS_LR: 0.1
 
@@ -23,19 +23,20 @@ TRAIN:
     EPOCH: 20
     START_EPOCH: 0 # 7
     BATCH_SIZE: 64 # 32
-    NUM_WORKERS: 64
-    BASE_LR: 0.005 # 0.005
+    NUM_WORKERS: 23
+    BASE_LR: 0.005
     CLS_WEIGHT: 1.0
     LOC_WEIGHT: 3.0
-    DFL_WEIGHT: 0.25 # 0.0625
-    RESUME: ''  # 'snapshot_ALL/checkpoint_e3.pth'
+    DFL_WEIGHT: 0.25
+    RESUME: '' # 'snapshot_GOTIOUGuideyaml/checkpoint_e3.pth'
     NUM_CLASSES: 2
     NUM_CONVS: 4
     REG_TOPK: 4
     PRIOR_PROB: 0.01
     OUTPUT_SIZE: 25 # 31
-    LOG_DIR: 'logGOT'
-    SNAPSHOT_DIR: './snapshotGOT'
+    REG_MAX: 16
+    LOG_DIR: 'logAll'
+    SNAPSHOT_DIR: './snapshotAll'
 
     LR:
         TYPE: 'cos'
@@ -52,8 +53,11 @@ TRAIN:
 
 DATASET:
     NAMES: 
+    - 'VID'
+    - 'YOUTUBEBB'
+    - 'COCO'
+    - 'DET'
     - 'GOT'
-
 
     TEMPLATE:
         SHIFT: 4
@@ -69,14 +73,28 @@ DATASET:
         FLIP: 0.0
         COLOR: 1.0
 
-    GOT:
-        FRAME_RANGE: 50
-        NUM_USE: 100000
-
-    VIDEOS_PER_EPOCH: 600000
-
     NEG: 0.0
     GRAY: 0.0
 
-#HP_SEARCH:
-#    GOT10k: [0.997, 0.184, 0.273]
+    VID:
+        FRAME_RANGE: 100
+        NUM_USE: 110000
+
+    YOUTUBEBB:
+        FRAME_RANGE: 3
+        NUM_USE:  210000
+
+    GOT:
+        FRAME_RANGE: 100
+        NUM_USE: 160000
+
+    DET:
+        FRAME_RANGE: 100
+        NUM_USE:  60000
+
+    COCO:
+        FRAME_RANGE: 1
+        NUM_USE:  60000
+
+
+    VIDEOS_PER_EPOCH: 600000
