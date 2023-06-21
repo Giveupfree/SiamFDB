@@ -74,7 +74,8 @@ pip install -r requirements.txt
 ```
 
 ### Download the pretrained model:  
-The model has been trained for testing and validation.[model](https://pan.baidu.com/s/1aVYFDC-11eD-RDK85BSMSQ) code: xyqt
+The model has been trained for testing and validation.
+[model](https://pan.baidu.com/s/1aVYFDC-11eD-RDK85BSMSQ) code: xyqt
 
 Download testing datasets and put them into `test_dataset` directory. If you want to test the tracker on a new dataset, please refer to [pysot-toolkit](https://github.com/Giveupfree/SOTDrawRect) to set test_dataset.
 
